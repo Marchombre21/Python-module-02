@@ -24,22 +24,22 @@ def garden_operations(test: str):
 
 
 def test_error_types():
-    print("=== Garden Error Types Demo ===\n")
+    print("=== Garden Error Types Demo ===")
     tests = ["value", "key", "zero", "file"]
     for test in tests:
         try:
             garden_operations(f"{test}")
         except ValueError as e:
-            print("Testing ValueError...")
+            print("\nTesting ValueError...")
             print(f"Caught ValueError: {e}")
         except KeyError as e:
-            print("Testing KeyError...")
+            print("\nTesting KeyError...")
             print(f"Caught KeyError: {e}")
         except ZeroDivisionError as e:
-            print("Testing ZeroDivisionError...")
+            print("\nTesting ZeroDivisionError...")
             print(f"Caught ZeroDivisionError: {e}")
         except FileNotFoundError as e:
-            print("Testing FileNotFoundError..")
+            print("\nTesting FileNotFoundError..")
             print(f"Caught FileNotFoundError: {e}")
     print("\n=== Garden Multiple Error Types Demo ===\n")
     for test in tests:

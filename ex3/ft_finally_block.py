@@ -16,12 +16,12 @@ class PlantNameError(Exception):
         super().__init__(message)
 
 
-class Plant():
+class Plant:
     def __init__(self, name: str):
         self.name = name
 
 
-def water_plants(plant_list: list):
+def water_plants(plant_list: list[Plant]):
     print("Opening watering system")
     for plant in plant_list:
         if plant.name:
