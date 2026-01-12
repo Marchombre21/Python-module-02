@@ -31,6 +31,9 @@ def water_plants(plant_list: list):
 
 
 def test_watering_system():
+    """The plant_list is the good list, with names, and the no_plant_list is
+    the bad one, with no names.
+    """
     name_list = ["Tulipe", "Orthensia", "Marguerite"]
     plant_list: list[Plant] = []
     no_name_list = ["Tomate", None, None]
@@ -42,19 +45,19 @@ def test_watering_system():
     print("Testing normal watering...")
     try:
         water_plants(plant_list)
-        print("Watering completed successfully!\n")
+        print("Watering completed successfully!")
     except PlantNameError as e:
         print(e)
     finally:
-        print("Closing watering system (cleanup)")
+        print("Closing watering system (cleanup)\n")
     print("Testing with error...")
     try:
         water_plants(no_plant_list)
-        print("Watering completed successfully!\n")
+        print("Watering completed successfully!")
     except PlantNameError as e:
         print(e)
     finally:
-        print("Closing watering system (cleanup)")
+        print("Closing watering system (cleanup)\n")
     print("\nCleanup always happens, even with errors!")
 
 
