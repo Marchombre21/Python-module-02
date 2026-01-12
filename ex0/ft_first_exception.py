@@ -10,7 +10,7 @@
 #                                                                             #
 # ****************************************************************************#
 
-def check_temperature(temp_str: str):
+def check_temperature(temp_str: str) -> int:
     try:
         temp = int(temp_str)
         if 0 <= temp <= 40:
